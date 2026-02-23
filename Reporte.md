@@ -932,3 +932,7 @@ El proyecto SOC Platform fue implementado exitosamente a pesar de enfrentar múl
 - ✅ Funcionalidad completa del flujo SOC de extremo a extremo
 
 La plataforma está operativa y lista para demostración. Con las mejoras recomendadas puede escalar a un SOC real en producción.
+
+---
+
+[Ver Imágenes de Evidencia](Imagenes_Evidencia/)
