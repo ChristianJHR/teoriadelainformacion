@@ -711,7 +711,7 @@ Dentro del caso creado:
 
 ---
 
-## 📊 RECURSOS DEL SISTEMA
+## RECURSOS DEL SISTEMA
 
 ### Uso de RAM (aproximado)
 
