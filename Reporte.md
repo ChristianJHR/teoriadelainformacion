@@ -736,7 +736,7 @@ Dentro del caso creado:
 
 ---
 
-## 🔧 COMANDOS DE MANTENIMIENTO
+## COMANDOS DE MANTENIMIENTO
 
 ### Ver estado de servicios
 
@@ -901,6 +901,6 @@ La plataforma está operativa y lista para demostración. Con las mejoras recome
 
 ---
 
-##EVIDENCIA
+## EVIDENCIA
 
 [Ver Imágenes de Evidencia](Imagenes_Evidencia/)
