@@ -3,7 +3,7 @@
 
 ---
 
-## 📋 RESUMEN
+## RESUMEN
 
 Este documento detalla la implementación completa de una plataforma SOC (Security Operations Center) integrando cuatro herramientas de seguridad open-source: Wazuh (SIEM), TheHive (gestión de casos), Cortex (análisis automatizado) y MISP (threat intelligence). El documento cubre desde la preparación del entorno hasta la prueba de concepto final, incluyendo todos los errores encontrados y sus soluciones.
 
@@ -11,7 +11,7 @@ Este documento detalla la implementación completa de una plataforma SOC (Securi
 
 ---
 
-## 🎯 OBJETIVOS DEL PROYECTO
+## OBJETIVOS DEL PROYECTO
 
 - Implementar Wazuh como SIEM principal para detección de amenazas
 - Configurar TheHive para gestión de incidentes y casos
@@ -21,7 +21,7 @@ Este documento detalla la implementación completa de una plataforma SOC (Securi
 
 ---
 
-## 🖥️ ESPECIFICACIONES TÉCNICAS
+## ESPECIFICACIONES TÉCNICAS
 
 ### Infraestructura
 
@@ -51,7 +51,7 @@ Este documento detalla la implementación completa de una plataforma SOC (Securi
 
 ---
 
-## 🚀 GUÍA DE INSTALACIÓN PASO A PASO
+## GUÍA DE INSTALACIÓN PASO A PASO
 
 > Esta sección documenta el proceso completo de instalación ejecutado, con todos los comandos utilizados.
 
@@ -122,7 +122,7 @@ sudo bash ./wazuh-install.sh -a -i
 
 > ⚠️ **Nota:** El flag `-i` es necesario para ignorar la validación de sistema operativo (Ubuntu 24.04 no es reconocido de forma nativa por el instalador).
 
-> 📝 **IMPORTANTE:** Guardar las credenciales que aparecen al finalizar la instalación:
+> **IMPORTANTE:** Guardar las credenciales que aparecen al finalizar la instalación:
 > ```
 > User: admin
 > Password: [ANOTAR AQUÍ]
@@ -607,7 +607,7 @@ echo "127.0.0.1 soc-plataform" | sudo tee -a /etc/hosts
 
 ---
 
-## 🌐 TABLA DE ACCESOS
+## TABLA DE ACCESOS
 
 | Servicio | URL | Usuario | Password | Puerto |
 |---|---|---|---|---|
@@ -618,7 +618,7 @@ echo "127.0.0.1 soc-plataform" | sudo tee -a /etc/hosts
 
 ---
 
-## ✅ PRUEBA DE CONCEPTO — FLUJO COMPLETO SOC
+## PRUEBA DE CONCEPTO — FLUJO COMPLETO SOC
 
 ### Escenario
 
@@ -804,7 +804,7 @@ df -h
 
 ---
 
-## 🛠️ SOLUCIÓN DE PROBLEMAS COMUNES
+## SOLUCIÓN DE PROBLEMAS COMUNES
 
 ### TheHive muestra "Internal Error"
 
@@ -848,41 +848,7 @@ sleep 120
 
 ---
 
-## 📝 LECCIONES APRENDIDAS
-
-### 1. Planificación de Recursos
-
-- **Crítico:** 100GB de disco no es negociable — ampliar antes de empezar
-- Los 8GB de RAM están al límite; 16GB sería ideal para producción
-- Bridge mode es esencial para simplificar el acceso a las interfaces web
-
-### 2. Docker en Producción
-
-- Siempre verificar permisos de volúmenes antes de iniciar (`chown 1000:1000`)
-- Usar `docker-compose ps` frecuentemente para monitorear estados
-- Los logs son la primera herramienta de troubleshooting: `docker logs -f [container]`
-
-### 3. Integración de Herramientas
-
-- Documentar todas las API keys generadas — MISP solo las muestra una vez al crearlas
-- Probar las conexiones inmediatamente después de configurar cada integración
-- Deshabilitar SSL verification en ambientes de prueba (no aplicar en producción)
-
-### 4. Troubleshooting
-
-- Revisar logs siempre antes de asumir la causa del problema
-- Verificar espacio en disco ante cualquier comportamiento errático
-- Respetar los tiempos de inicialización: Cassandra (~2 min), MISP (~15 min)
-
-### 5. MISP Específico
-
-- Las imágenes Docker de MISP tienen bugs conocidos no documentados oficialmente
-- La variable `CRON_USER_ID: "33"` es esencial para que el contenedor arranque
-- MariaDB 10.11 es más estable que MySQL 8.0 para esta integración
-
----
-
-## 🚀 MEJORAS FUTURAS RECOMENDADAS
+## MEJORAS FUTURAS RECOMENDADAS
 
 ### Corto Plazo
 
@@ -905,7 +871,7 @@ sleep 120
 
 ---
 
-## 📚 REFERENCIAS Y DOCUMENTACIÓN
+## REFERENCIAS Y DOCUMENTACIÓN
 
 ### Documentación Oficial
 
@@ -922,7 +888,7 @@ sleep 120
 
 ---
 
-## 🎓 CONCLUSIÓN
+## CONCLUSIÓN
 
 El proyecto SOC Platform fue implementado exitosamente a pesar de enfrentar múltiples desafíos técnicos. La solución final demuestra:
 
@@ -934,5 +900,7 @@ El proyecto SOC Platform fue implementado exitosamente a pesar de enfrentar múl
 La plataforma está operativa y lista para demostración. Con las mejoras recomendadas puede escalar a un SOC real en producción.
 
 ---
+
+##EVIDENCIA
 
 [Ver Imágenes de Evidencia](Imagenes_Evidencia/)
